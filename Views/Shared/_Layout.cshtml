@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AddressBook</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="~/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="~/css/flag-icon.min.css" rel="stylesheet" />
+    <link href="~/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+
+    <!-- END Template CSS-->
+    <!-- START: Prism CSS-->
+    <link href="~/css/prism.css" rel="stylesheet" />
+    <!-- END: Prism CSS-->
+    <!-- START: Page CSS-->
+    <link href="~/css/all.min.css" rel="stylesheet" />
+    <!-- END: Page CSS-->
+    <!-- START: Custom CSS-->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <!-- END: Custom CSS-->
+</head>
+<body id="main-container" class="default semi-dark horizontal-menu" style="background-color: lightblue; height: 100vh;">
+    <div class="se-pre-con">
+        <div class="loader"></div>
+    </div>
+    <partial name="_LoginPartial">
+        <!--START: Header-->
+        <!-- END: Header-->
+        <!-- START: Main Content-->
+        @RenderBody()
+        <!-- END: Content-->
+        <!-- START: Footer-->
+        <!--<footer class="site-footer">
+        2020 © PICK
+    </footer>-->
+        <!-- END: Footer-->
+        <!-- START: Template JS-->
+        <script src="~/js/jquery-3.3.1.min.js"></script>
+        <script src="~/js/jquery-ui.min.js"></script>
+        <script src="~/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/jquery.slimscroll.min.js"></script>
+        <!-- END: Template JS-->
+        <!-- START: APP JS-->
+        <script src="~/js/app.js"></script>
+        <!-- END: APP JS-->
+        <!-- START: Prism JS-->
+        <script src="~/js/prism.js"></script>
+        <!-- END: Prism JS-->
+        <!-- START: Page JS-->
+        <!-- END: Page JS-->
+        <script>
+            $('#image').bind('change', function () { var fileName = ''; fileName = $(this).val(); $('#showfile').html(fileName); })
+        </script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/jquery.dataTables.min.js"></script>
+        <script src="~/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/js/jszip.min.js"></script>
+        <script src="~/js/pdfmake.min.js"></script>
+        <script src="~/js/vfs_fonts.js"></script>
+        <script src="~/js/dataTables.buttons.min.js"></script>
+        <script src="~/js/buttons.bootstrap4.min.js"></script>
+        <script src="~/js/buttons.colVis.min.js"></script>
+        <script src="~/js/buttons.flash.min.js"></script>
+        <script src="~/js/buttons.html5.min.js"></script>
+        <script src="~/js/buttons.print.min.js"></script>
+        <script src="~/js/datatable.script.js"></script>
+        @RenderSection("Scripts", required: false)
+</body>
+</html>
